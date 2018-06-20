@@ -1,0 +1,66 @@
+/* CSS sheet for the main page of the game.
+Here the background is set and the sprites for enemies,
+hero and missiles are linked.
+Additionally, the size of the divs are defined.
+Position is absolute for now*/
+
+#background {
+  background-image: url('../assets/background.png');
+  /* background-image: url('../assets/space.jpeg'); */
+
+  /*for original bg*/
+  height:800px;
+  width:1200px;
+   /*for space ani*/
+  /* background-image: url('../assets/spaceani.png');
+  height:1080px;
+  width:1920px; */
+   /*for space*/
+  /* height:1080px;
+  width:1920px; */
+  position: absolute;
+}
+#hero {
+  background-image: url('../assets/hero.png');
+  height:50px;
+  width:50px;
+  position: absolute;
+  top: 700px;
+  left:575px;
+}
+
+.enemy {
+  background-image: url('../assets/enemy.png');
+  height: 50px;
+  width:50px;
+  position: absolute;
+  top: 100px;
+  left: 550px;
+}
+
+#missiles{  /*this is the box to make the missiles moving */
+  height: 800px;
+  width: 1200px;
+  position: absolute;
+  /* background-color: red; to check it is there */
+}
+.missile1 {
+  background-image: url('../assets/missile1.png');
+  height: 28px;
+  width: 10px;
+  position: absolute;
+
+}
+
+#enemies {
+  width: 1200px;
+  height: 800px;
+  position: absolute;
+}
+
+.enemy{
+  width: 50px;
+  height: 50px;
+  background-image: url('../assets/enemy.png');
+  position: absolute;
+}
