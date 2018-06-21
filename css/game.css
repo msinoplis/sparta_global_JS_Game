@@ -3,13 +3,17 @@ Here the background is set and the sprites for enemies,
 hero and missiles are linked.
 Additionally, the size of the divs are defined.
 Position is absolute for now*/
+@font-face {
+    font-family: ailerons;
+    src: url('../assets/Ailerons/Ailerons-Typeface.otf');
+    font-family: marske;
+    src: url('../assets/Marske/Marske.otf');
+}
 
 body{
 margin:0 auto;
 background-color: #B81ED0;
-}
-h1,p {
-font-family: fantasy;
+font-family: marske;
 }
 
 .wrapper{
@@ -115,19 +119,19 @@ font-weight:bold;
 margin-bottom:10px;
 margin-top:10px;
 color: #6A3B8F;
-font-family:Verdana, Arial, Helvetica, sans-serif;
+/* font-family:Verdana, Arial, Helvetica, sans-serif; */
 }
 
 .playermessage{
   margin-top:10px;
   font-size:13px;
-  font-family:Verdana, Arial, Helvetica, sans-serif;
+  /* font-family:Verdana, Arial, Helvetica, sans-serif; */
 }
 
 .gameover {
 /* background-image: url('../assets/gameover.gif'); */
 color: #67205D;
-font-family:Verdana, Arial, Helvetica, sans-serif;
+/* font-family:Verdana, Arial, Helvetica, sans-serif; */
 }
 
 .retrybox {
@@ -141,7 +145,7 @@ padding:10px;
 color:#FFFFFF;
 border:2px solid #67205D;
 font-size:18px;
-font-family:Verdana, Arial, Helvetica, sans-serif;
+/* font-family:Verdana, Arial, Helvetica, sans-serif; */
 
     /* box-shadow: 0 0 1px #ccc;
     -webkit-transition-duration: 2s;
@@ -172,19 +176,19 @@ box-shadow: 0 0 1px #ccc;
   margin-bottom:10px;
   margin-top:10px;
   color: #6A3B8F;
-  font-family:Verdana, Arial, Helvetica, sans-serif;
+  /* font-family:Verdana, Arial, Helvetica, sans-serif; */
   }
 
   .playermessage{
     margin-top:10px;
     font-size:13px;
-    font-family:Verdana, Arial, Helvetica, sans-serif;
+    /* font-family:Verdana, Arial, Helvetica, sans-serif; */
   }
 
   .win {
   /* background-image: url('../assets/gameover.gif'); */
   color: #67205D;
-  font-family:Verdana, Arial, Helvetica, sans-serif;
+  /* font-family:Verdana, Arial, Helvetica, sans-serif; */
   }
 
   .continuebox {
@@ -198,7 +202,7 @@ box-shadow: 0 0 1px #ccc;
   color:#FFFFFF;
   border:2px solid #67205D;
   font-size:18px;
-  font-family:Verdana, Arial, Helvetica, sans-serif;
+  /* font-family:Verdana, Arial, Helvetica, sans-serif; */
 
       /* box-shadow: 0 0 1px #ccc;
       -webkit-transition-duration: 2s;
@@ -220,3 +224,70 @@ box-shadow: 0 0 1px #ccc;
       -webkit-box-shadow:0px 0px 0px 0px #67205D inset;
       -webkit-transform: scale(1);
     }
+
+/* Details Column */
+.details{
+  text-align: center;
+  /* width: 100%; */
+}
+.scorebox {
+  border-radius: 15px;
+  border-color: #67205D;
+  background-color: #0703A7;
+  color: #FFFFFF;
+  padding-top: 5px;
+  margin-top: 20px;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#score {
+  color: #DAC05E;
+  font-size: 60px;
+}
+
+.instructions{
+  margin-top: 100px;
+  margin-right: 20px;
+  background-color: #442C74;
+  border-radius: 15px;
+  border-color: #67205D;
+  color: #FFFFFF;
+  padding-top: 10px;
+  box-shadow: 0 4px 8px 0 ;
+}
+
+#content{
+    display:none;
+    display:
+}
+
+.start{
+  margin-top: 1000px;
+  border-radius: 15px;
+  border-color: #67205D;
+  background-color: #0703A7;
+  color: #FFFFFF;
+  padding-top: 5px;
+  margin-top: 20px;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px;
+}
+#startsubmit{
+  margin-top: 15px;
+}
+
+#playbtn{
+  border-radius: 15px;
+  border-color: #67205D;
+  background-color: #0703A7;
+  color: #FFFFFF;
+}
+#startscreen{
+  position: absolute;
+    z-index: 1;
+    text-align: center;
+}
+
+.col-xl-10{
+}

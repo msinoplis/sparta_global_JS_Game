@@ -36,6 +36,20 @@ var enemies = [
     { left: 900, top: 175 }
 ];
 
+//Score calculation
+var score = 0;
+
+function addScore(value) {
+  score = score + value;
+  $("#score").html(score);
+  $("#clearscore").html(score);
+  $("#finalscore").html(score);
+  }
+
+//play button
+$('#playbtn').click(function() {
+
+});
 
 //move the HERO
 //and FIRE
@@ -123,6 +137,7 @@ function loseCheck() {
   for (var i = 0; i < enemies.length; i++) {
     if (enemies[i].top== 650) {
       playerLose();
+      $(".container").stop(stopAll,goToEnd);
     }
   }
 }
@@ -161,15 +176,19 @@ function playerWin() {
   // $("#scoreb").css("display", "none");
 // }
 
+//instructions Page
+//collapsible
+$('#how-to-play').click(function(){
+    $('#content').slideToggle('slow');
+});
 
+//remove start page
+//and calling the game to run
 
-
-//Score calculation
-var score = 0;
-
-function addScore(value) {
-  score = score + value;
-}
+    $(".startsubmit").click(function(){
+        $("#startscreen").css("display", "none");
+        gameLoop();
+      });
 
 //function for the game to be running (calling functions)
 //the time limit in setTimeout determines the speed
@@ -184,14 +203,10 @@ function gameLoop() {
     loseCheck();
 }
 
-//calling the game to run
-gameLoop();
-
+  // gameLoop();
 
 //TO ADD
-//win window
-//score
-//instructions
+//Start Screen
 //leaderboard
 //limits to left right and bot
 //add explosion to enemy collision
