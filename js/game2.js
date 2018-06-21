@@ -2,6 +2,10 @@
 $(function() {
 
 // console.log("HEY"); check the js is loaded
+//check every little step for working code
+
+//create the Start Screen
+
 
 //create set position for hero
 var hero = {
@@ -107,17 +111,64 @@ function collisionDetection() {
             ) {
                 enemies.splice(enemy, 1);
                 missiles.splice(missile, 1);
+                addScore(10);
                 console.log(enemies);
+                console.log(score);
             }
         }
     }
 }
 
-//create function to check for win
-function winCheck() {
-  if (enemies.lenght == 0){
-  alert ('YOU HAVE WON THE GAME');
+function loseCheck() {
+  for (var i = 0; i < enemies.length; i++) {
+    if (enemies[i].top== 650) {
+      playerLose();
+    }
   }
+}
+
+//check for win
+function winCheck() {
+  if (enemies.length == 0){
+  playerWin();
+  }
+}
+
+//player dying
+function playerLose(){
+
+$("#box").animate({position:'absolute',top:'auto',bottom:'40%'}, 1300);
+$("#box").animate({position:'absolute',top:'auto',bottom:'-50%'}, 1000,'linear');
+$("#btn1").css("display", "none");
+
+$( "#gameoverbox" ).slideDown( "slow" );
+}
+
+//cleaning the stage
+function playerWin() {
+  $("#box").animate({position:'absolute',top:'auto',bottom:'40%'}, 1300);
+  $("#box").animate({position:'absolute',top:'auto',bottom:'-50%'}, 1000,'linear');
+  $("#btn1").css("display", "none");
+
+  $( "#winbox" ).slideDown( "slow" );
+
+}
+
+// var MyDiv1 = document.getElementById('doughnuts');
+//   var MyDiv2 = document.getElementById('showscor');
+//   MyDiv2.innerHTML = MyDiv1.innerHTML;
+
+  // $("#scoreb").css("display", "none");
+// }
+
+
+
+
+//Score calculation
+var score = 0;
+
+function addScore(value) {
+  score = score + value;
 }
 
 //function for the game to be running (calling functions)
@@ -130,6 +181,7 @@ function gameLoop() {
     drawEnemies();
     collisionDetection();
     winCheck();
+    loseCheck();
 }
 
 //calling the game to run
@@ -139,6 +191,8 @@ gameLoop();
 //TO ADD
 //win window
 //score
+//instructions
+//leaderboard
 //limits to left right and bot
 //add explosion to enemy collision
 //levels

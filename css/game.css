@@ -4,6 +4,27 @@ hero and missiles are linked.
 Additionally, the size of the divs are defined.
 Position is absolute for now*/
 
+body{
+margin:0 auto;
+background-color: #B81ED0;
+}
+h1,p {
+font-family: fantasy;
+}
+
+.wrapper{
+/* border-radius: 5px;
+border-style: solid;
+border-width: thick;
+border-color: #B81ED0; */
+}
+.border{
+border-radius: 5px;
+border-style: solid;
+border-width: thick;
+border-color: #21205D;
+}
+
 #background {
   background-image: url('../assets/background.png');
   /* background-image: url('../assets/space.jpeg'); */
@@ -18,7 +39,7 @@ Position is absolute for now*/
    /*for space*/
   /* height:1080px;
   width:1920px; */
-  position: absolute;
+  /* position: absolute; */
 }
 #hero {
   background-image: url('../assets/hero.png');
@@ -64,3 +85,138 @@ Position is absolute for now*/
   background-image: url('../assets/enemy.png');
   position: absolute;
 }
+
+/*GAME OVER BOX*/
+#gameoverbox,#winbox{
+width:100%;
+margin-top:10%;
+position:fixed;
+width:100%;
+left:0px;
+top:0px;
+z-index:99999999;
+display:none;
+}
+
+.insidebox{
+width:400px;
+margin:auto;
+background-color:#DA9277;
+border:5px solid #0703A7;
+box-shadow:0px 0px 30px #000;
+border-radius:10px;
+padding:20px;
+text-align:center;
+}
+
+.boxheader{
+font-size:25px;
+font-weight:bold;
+margin-bottom:10px;
+margin-top:10px;
+color: #6A3B8F;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+.playermessage{
+  margin-top:10px;
+  font-size:13px;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+.gameover {
+/* background-image: url('../assets/gameover.gif'); */
+color: #67205D;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+.retrybox {
+margin-top:20px;
+}
+
+.retrysubmit {
+background-color:#0703A7;
+border-radius:5px;
+padding:10px;
+color:#FFFFFF;
+border:2px solid #67205D;
+font-size:18px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+
+    /* box-shadow: 0 0 1px #ccc;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-timing-function: linear;
+    box-shadow:0px 0 0 #31708f  inset;
+}
+
+.retrysubmit:hover {
+    box-shadow:100px 0 0 #31708f inset;
+} */
+
+box-shadow: 0 0 1px #ccc;
+    -webkit-transition-duration: 1.5s;
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transform-origin: 0 0;
+    box-shadow:0px 0px 0px 100px #67205D inset;
+}
+.retrysubmit:hover{
+    -webkit-box-shadow:0px 0px 0px 0px #67205D inset;
+    -webkit-transform: scale(1);
+  }
+
+/*WIN BOX*/
+
+  .boxheader{
+  font-size:25px;
+  font-weight:bold;
+  margin-bottom:10px;
+  margin-top:10px;
+  color: #6A3B8F;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  }
+
+  .playermessage{
+    margin-top:10px;
+    font-size:13px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+  }
+
+  .win {
+  /* background-image: url('../assets/gameover.gif'); */
+  color: #67205D;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  }
+
+  .continuebox {
+  margin-top:20px;
+  }
+
+  .continuesubmit {
+  background-color:#0703A7;
+  border-radius:10px;
+  padding:10px;
+  color:#FFFFFF;
+  border:2px solid #67205D;
+  font-size:18px;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+
+      /* box-shadow: 0 0 1px #ccc;
+      -webkit-transition-duration: 2s;
+      -webkit-transition-timing-function: linear;
+      box-shadow:0px 0 0 #31708f  inset;
+  }
+
+  .retrysubmit:hover {
+      box-shadow:100px 0 0 #31708f inset;
+  } */
+
+  box-shadow: 0 0 1px #ccc;
+      -webkit-transition-duration: 1.5s;
+      -webkit-transition-timing-function: ease-out;
+      -webkit-transform-origin: 0 0;
+      box-shadow:0px 0px 0px 100px #67205D inset;
+  }
+  .continuesubmit:hover{
+      -webkit-box-shadow:0px 0px 0px 0px #67205D inset;
+      -webkit-transform: scale(1);
+    }

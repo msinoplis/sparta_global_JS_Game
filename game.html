@@ -1,42 +1,86 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Space Invaders Try</title>
-    <link rel="stylesheet" href="css/game.css">
-    <!--jQuery Link-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Modern Time Space Invaders</title>
+  <!-- Bootstrap Link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/game.css">
+
+  <!--jQuery Link-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
   <div class="wrapper">
 
-<!--creating 3 divs for the three elements on the map inside the background div-->
-    <div id="background">
-      <div id="hero"></div>
+    <!--creating 3 divs for the three elements on the map inside the background div-->
+    <div class="container-flex border rounded">
+      <div class="row">
+        <div class="col-xl-9">
 
-      <div id="enemies"></div>
+          <!-- WIN BOX -->
+          <div id="winbox">
+            <div class="insidebox">
 
-      <!-- <div id="missilebox"> -->
-        <div id="missiles">
-        </div>
-      <!-- </div> -->
-
-
-
-
+              <h1 class="win">That's a Win!</h1>
+              <div class="boxheader">Your Score is: <span id="showscore"></span></div>
+              <div class="playermessage">Keep it going Space Cowboy!</div>
 
 
-    </div>
+              <form class="continuebox">
+                <input class="continuesubmit" type="submit" value="Next Level"/>
+              </form>
+            </div>
+          </div>
+
+          <!--GAME OVER BOX -->
+          <div id="gameoverbox">
+            <div class="insidebox">
+
+              <h1 class="gameover">Game Over</h1>
+              <div class="boxheader">Total Score: <span id="showscore"></span></div>
+              <div class="playermessage">Good Run Space Cowboy!</div>
+
+
+              <form class="retrybox">
+                <input class="retrysubmit" type="submit" value="Try Again"/>
+              </form>
+            </div>
+          </div>
+
+        <div id="background" class="rounded">
+
+          <div id="hero"></div>
+
+          <div id="enemies"></div>
+
+          <div id="missiles"></div>
+        </div> <!--background-->
+
+      </div> <!--col 9-->
+      <div class="col-xl-3">
+
+      </div> <!--col 3-->
+
+      </div><!--row-->
+
+    </div> <!--container-->
   </div>
 
-<!--JSLink-->
-<!-- <script type="text/javascript" src="js/game.js"> -->
 
-</script>
-<script type="text/javascript" src="js/game2.js">
 
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  </body>
+  <!--JSLink-->
+  <!-- <script type="text/javascript" src="js/game.js"> -->
+
+  </script>
+  <script type="text/javascript" src="js/game2.js">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</body>
+
 </html>
