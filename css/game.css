@@ -98,7 +98,7 @@ position:fixed;
 width:100%;
 left:0px;
 top:0px;
-z-index:99999999;
+z-index:1;
 display:none;
 }
 
@@ -273,21 +273,32 @@ box-shadow: 0 0 1px #ccc;
   margin-right: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px;
 }
-#startsubmit{
+.startsubmit{
   margin-top: 15px;
+  border-radius: 15px;
+  border-color: #67205D;
+  background-color: #0703A7;
+  color: #FFFFFF;
 }
-
+.startsubmit:hover ,#playbtn:hover , #how-to-play:hover ,
+.continuesubmit:hover,.retrysubmit:hover {
+  cursor: pointer;
+}
 #playbtn{
   border-radius: 15px;
   border-color: #67205D;
   background-color: #0703A7;
   color: #FFFFFF;
 }
+
 #startscreen{
   position: absolute;
     z-index: 1;
     text-align: center;
+    margin-left: 385px;
+    margin-top: 200px;
 }
+
 
 .col-xl-10{
 }

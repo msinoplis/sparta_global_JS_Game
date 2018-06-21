@@ -205,14 +205,13 @@ function gameLoop() {
 
   // gameLoop();
 
-//TO ADD
-//Start Screen
+//FUTURE WORK
 //leaderboard
 //limits to left right and bot
 //add explosion to enemy collision
 //levels
 //use different missiles
-//(maybe) move hero up down
+//add mouse controls
 //more difficult enemies
 //sound-effects
 
